@@ -101,13 +101,37 @@ body {
   padding: 11px 30px;
   background-color: var(--title-color);
 }
+@media screen and (min-width: 768px) {
+  .button:hover {
+    cursor: pointer;
+    color: white;
+    border: 1px solid white;
+  }
+}
 
 .button--first {
   color: var(--first-card-color);
 }
+@media screen and (min-width: 768px) {
+  .button--first:hover {
+    background-color: var(--first-card-color);
+  }
+}
 .button--second {
   color: var(--second-card-color);
 }
+
+@media screen and (min-width: 768px) {
+  .button--second:hover {
+    background-color: var(--second-card-color);
+  }
+}
 .button--third {
   color: var(--third-card-color);
+}
+
+@media screen and (min-width: 768px) {
+  .button--third:hover {
+    background-color: var(--third-card-color);
+  }
 }
