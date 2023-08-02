@@ -3,6 +3,12 @@
 *::before {
   box-sizing: border-box;
 }
+:root {
+  --first-card-color: #e28625;
+  --second-card-color: #006971;
+  --third-card-color: #004140;
+  --title-color: #f2f2f2;
+}
 
 img {
   max-width: 100%;
@@ -22,6 +28,86 @@ a {
 }
 
 body {
-  margin: 0;
-  background-image: url(../assets/images/sleep-cat.jpeg);
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-family: 'Lexend Deca', sans-serif;
+}
+
+.cards {
+  width: 327px;
+  display: flex;
+  flex-direction: column;
+}
+
+@media screen and (min-width: 768px) {
+  .cards {
+    height: 500px;
+    width: 920px;
+    flex-direction: row;
+  }
+}
+
+.card {
+  padding: 48px;
+}
+
+.card--first {
+  border-radius: 8px 8px 0 0;
+  background-color: var(--first-card-color);
+}
+
+@media screen and (min-width: 768px) {
+  .card--first {
+    border-radius: 8px 0 0 8px;
+  }
+}
+.card--second {
+  background-color: var(--second-card-color);
+}
+.card--third {
+  border-radius: 0 0 8px 8px;
+  background-color: var(--third-card-color);
+}
+@media screen and (min-width: 768px) {
+  .card--third {
+    border-radius: 0 8px 8px 0;
+  }
+}
+
+.title {
+  color: var(--title-color);
+  font-family: 'Big Shoulders Display';
+  font-size: 40px;
+}
+.text {
+  color: white;
+  font-size: 15px;
+  line-height: 25px;
+  margin-bottom: 25px;
+}
+
+@media screen and (min-width: 768px) {
+  .text {
+    margin-bottom: 83px;
+  }
+}
+
+.button {
+  border: none;
+  border-radius: 25px;
+  padding: 11px 30px;
+  background-color: var(--title-color);
+}
+
+.button--first {
+  color: var(--first-card-color);
+}
+.button--second {
+  color: var(--second-card-color);
+}
+.button--third {
+  color: var(--third-card-color);
 }
